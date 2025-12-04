@@ -4,8 +4,10 @@
     box-sizing: border-box;
 }
 
+/*Home Page Styles*/
 body{
    background: linear-gradient(190deg, #f0d9a6,#d8b56a, #E77A45, #BAAC86,#837f65);
+   background-size:cover;
    justify-items: center;
 }
 
@@ -18,6 +20,7 @@ body{
     border-radius: 15px;
     border: 5px solid #837f65;
     padding: 15px;
+
 }
 
 /*  Navigation Bar Styles */
@@ -64,22 +67,30 @@ h1{
     justify-self: center;
     color: #d8b56a;
 }
+h1:hover{
+    transform:rotateX(360deg);
+    transition: transform 0.5s;
+}
 
 #last_bit{
     margin-top: 15px;
     margin-bottom: 40px;
 }
 #headline{
-    margin-left: 65px;
-    margin-right: 65px;
-    padding-left: 150px ;
-    padding-right: 150px ;
+    margin-left: 60px;
+    margin-right: 60px;
+    padding-left: 140px ;
+    padding-right: 140px ;
     margin-bottom: 40px;
     text-align: center;
+    font-family: Inter, sans-serif;
+    font-weight: normal;
 }
 .spacer{
     height: 20px;
 }
+
+/* Main Content Styles */
 main{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -98,6 +109,7 @@ main{
 .wording{
     margin-bottom: 10px;
     margin-left: 25px;
+    font-family: Inter, sans-serif;
 }
 
 .list{
@@ -111,9 +123,21 @@ ul{
 #left{
     margin-left: 25px;
 }
+.home_pics{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #837f65;
+}
 
 footer{
     margin-top: 30px;
     margin-bottom: 15px;
     text-align: center;
+    color:#d8b56a;
+    font-weight: bold;
 }
+
+/*Receipes Page Styles*/
+
+/*Sign Up Page Styles*/
