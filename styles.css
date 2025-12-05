@@ -7,15 +7,12 @@
 /*Home Page Styles*/
 body{
    background: linear-gradient(190deg, #f0d9a6,#d8b56a, #E77A45, #BAAC86,#837f65);
-   background-size:cover;
-   justify-items: center;
+   min-height: 100vh;
+   background-repeat: no-repeat;
 }
 
 #container{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 185px;
-    margin-right: 185px;
+    margin-top: 50px 185px;
     background-color: white;
     border-radius: 15px;
     border: 5px solid #837f65;
@@ -141,3 +138,52 @@ footer{
 /*Receipes Page Styles*/
 
 /*Sign Up Page Styles*/
+h2, h3 {
+    color: #d8b56a;
+}
+
+h3 {
+    font-size: 1.5rem;
+    padding: 30px;
+}
+
+#wrapper{
+    margin: 50px 185px;
+    background-color: white;
+    border-radius: 15px;
+    border: 5px solid #837f65;
+    padding: 15px;
+    text-align: center;
+
+}
+
+#myForm, #forminfo {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+}
+
+#forminfo {
+    padding-bottom: 10px;
+}
+
+#submit {
+    color:white;
+    border:#837f65 solid 2px;
+    background-color: #837f65;
+    width: 80px;
+    height: 30px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#submit:hover {
+    color:#d8b56a;
+    background-color: white;
+}
+
+#formContainer {
+    margin-bottom: 80px;
+}
