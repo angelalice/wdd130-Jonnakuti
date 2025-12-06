@@ -98,6 +98,8 @@ main{
     gap: 40px;
     margin-top: 50px;
     margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .titles{
@@ -105,11 +107,14 @@ main{
     margin-right: 15px;
     margin-bottom: 15px;
     color: #d8b56a;
+    font-size: 20px;
 }
+
 .wording{
     margin-bottom: 10px;
     margin-left: 25px;
     font-family: Inter, sans-serif;
+    font-size: 18px;
 }
 
 .list{
@@ -127,7 +132,10 @@ ul{
     width: 100%;
     height: auto;
     border-radius: 10px;
-    border: 3px solid #837f65;
+    border: 3px solid #837f65; 
+    width: 300px;
+    height: auto;
+    
 }
 
 footer{
