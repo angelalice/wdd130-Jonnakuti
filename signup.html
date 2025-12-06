@@ -8,26 +8,34 @@
 </head>
 <body>
     <div id="wrapper">
-        <div id="formContainer">
-            <div id="heading">
-                <h2 id="htext">Fork & Fuel <br>         
-                    Daily Meal Receipes</h2>
+        <nav>
+            <img src="images/logo_transparent.png" alt="Fork & Fuel Logo" class="logo">
+            <div id="link_container">
+                <a href="index.html">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="signup.html">Sign Up</a>
             </div>
+        </nav>
+        <div id="formContainer">
+            <h1>Daily Meal Receipes</h1>
 
             <h3>Sign Up for Daily Nutritious Meal Ideas</h3>
             <form id="myForm">
-                <button type="button" id="closeBtn">X</button>
                 <div id="forminfo">
-                    <label class="labels" for="username">User Name:</label>
-                    <input type="text" id="username" name="username" required>
-
-                    <label class="labels" for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
-
-                    <label class="labels" for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label class="labels">Gender:</label>
-                    <div>
+                    <div class="input">
+                        <label class="labels" for="username">User Name:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="input">
+                        <label class="labels" for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="input">
+                        <label class="labels" for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input">
+                        <label class="labels">Gender:</label>
                         <input  type="radio" id="male" name="gender" value="male" required>
                         <label  for="male">Male</label>
                         <input  type="radio" id="female" name="gender" value="female" required>
@@ -46,45 +54,46 @@
                 </section>
 
                 <section>
-                    <button type="submit">Submit</button>
+                    <button type="submit" id="submit">Submit</button>
                 </section>
-            </form>
+            </form> 
         </div>
-    </div>
+        <footer> Fork & Fuel &copy; 2025 </footer>
 
 
-    <div id="output"></div>
+        <div id="output"></div>
 
-    <script>
-        // Here is some Javascript to start looking forward to wdd131
-        document.getElementById("closeBtn").addEventListener("click", function () {
-            document.getElementById("formContainer").style.display = "none";
-        });
-        const form = document.getElementById('myForm');
-        const output = document.getElementById('output');
+        <script>
+            // Here is some Javascript to start looking forward to wdd131
+            document.getElementById("closeBtn").addEventListener("click", function () {
+                document.getElementById("formContainer").style.display = "none";
+            });
+            const form = document.getElementById('myForm');
+            const output = document.getElementById('output');
 
-        form.addEventListener('submit', function (event) {
-            event.preventDefault(); // Stop form from actually submitting
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Stop form from actually submitting
 
-            const formData = new FormData(form);
-            const entries = [];
+                const formData = new FormData(form);
+                const entries = [];
 
-            for (const [key, value] of formData.entries()) {
-                if (key == "password") {
-                    entries.push(`<strong>${key}</strong>: ${value} (you should probably encrypt the password)`);
-                } else {
-                    entries.push(`<strong>${key}</strong>: ${value}`);
+                for (const [key, value] of formData.entries()) {
+                    if (key == "password") {
+                        entries.push(`<strong>${key}</strong>: ${value} (you should probably encrypt the password)`);
+                    } else {
+                        entries.push(`<strong>${key}</strong>: ${value}`);
+                    }
                 }
-            }
 
-            output.innerHTML = `
-            <br>  
-            <h3>Here is the data that would be sent to the server:</h3>
-            <ul>
-                ${entries.map(item => `<li>${item}</li>`).join('')}
-            </ul>
-            `;
-        });
-    </script>
+                output.innerHTML = `
+                <br>  
+                <h3>Here is the data that would be sent to the server:</h3>
+                <ul>
+                    ${entries.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+                `;
+            });
+        </script>
+    </div>
 </body>
 </html>
